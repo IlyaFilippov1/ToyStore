@@ -1,1 +1,47 @@
+if@if-GB:~$ mkdir projectGb
+if@if-GB:~$ cd projectGb/
+if@if-GB:~/projectGb$ mkdir schoolToys
+if@if-GB:~/projectGb$ mkdir kindergardenToys
+if@if-GB:~/projectGb$ cd schoolToys/
+if@if-GB:~/projectGb/schoolToys$ touch Robots
+if@if-GB:~/projectGb/schoolToys$ touch Constructor
+if@if-GB:~/projectGb/schoolToys$ touch TableGames
+if@if-GB:~/projectGb/schoolToys$ cd ../kindergardenToys/
+if@if-GB:~/projectGb/kindergardenToys$ touch SoftToys
+if@if-GB:~/projectGb/kindergardenToys$ touch Dolls
+if@if-GB:~/projectGb/kindergardenToys$ touch Cars
+if@if-GB:~/projectGb$ tree
+├── kindergardenToys
+│   ├── Cars
+│   ├── Dolls
+│   └── SoftToys
+└── schoolToys
+    ├── Constructor
+    ├── Robots
+    └── TableGames
+
+2 directories, 6 files
+if@if-GB:~/projectGb$ mv schoolToys/ ToysNames
+if@if-GB:~/projectGb$ mv kindergardenToys/* ToysNames
+if@if-GB:~/projectGb$ rm -d kindergardenToys/
+if@if-GB:~/projectGb$ mv ToysNames/ Toys
+if@if-GB:~/projectGb$ tree
+.
+└── Toys
+    ├── Cars
+    ├── Constructor
+    ├── Dolls
+    ├── Robots
+    ├── SoftToys
+    └── TableGames
+
+1 directory, 6 files
+
+if@if-GB:~/projectGb$ sudo snap install gimp
+if@if-GB:~/projectGb$ sudo snap remove gimp
+
+if@if-GB:~/projectGb$ crontab -e
+crontab: installing new crontab
+if@if-GB:~/projectGb$ crontab -l
+*/3 * * * * cp /home/if/projectGB/Toys/Cars /home/if/projectGB/Toys_back_up/Cars.bak
 
